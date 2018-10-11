@@ -3,7 +3,7 @@ body {
     padding: 0;
     outline: none;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     align-items: flex-start;
     justify-content: center;
     font-family: sans-serif;
@@ -13,7 +13,7 @@ body {
     text-align: center;
     margin-top: 0;
     margin-bottom: 150px;
-    font-size: 3rem;
+    font-size: 30px;
 }
 
 .container {
@@ -27,6 +27,8 @@ body {
     margin-top: 0;
     margin-bottom: 70px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .item {
@@ -35,6 +37,7 @@ body {
     height: 120px;
     margin-left: 60px;
     margin-right: 60px;
+    margin-bottom: 30px;
     background-color: #cccccc;
 }
 
@@ -114,4 +117,17 @@ body {
 .list_scale .item:hover span:nth-child(1) {
     transform: scale(2);
     opacity: .2;
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 22px;
+        margin-bottom: 75px;
+    }
+    .list_transform .item {
+        transform: rotate(-30deg) skew(25deg);
+    }
+    .list_scale .item {
+        margin-bottom: 60px;
+    }
 }
